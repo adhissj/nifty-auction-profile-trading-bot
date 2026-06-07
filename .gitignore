@@ -1,0 +1,45 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment and secret files
+.env
+*.env
+fyers_token.json
+token.json
+credentials.json
+secrets.json
+
+# Trading logs and generated outputs
+paper_trades*.csv
+live_trades*.csv
+trade_logs*.csv
+all_runners_trade_feed.csv
+all_runners_trade_summary.csv
+
+# Bot state and cache files
+state*.json
+profile_cache*.json
+cache*/
+logs/
+
+# Result files generated locally
+results/*.csv
+!results/sample_backtest_results.csv
+
+# Market data files
+data/*.csv
+!data/sample_nifty_5min.csv
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
