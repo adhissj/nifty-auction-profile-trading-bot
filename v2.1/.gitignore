@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+*.lock
+*.log
+venv/
+.venv/
+v21_research/
+data/private/
+*state.json
+*state.jsonl
+*trades.csv
+*decisions.jsonl
+*market_frames.jsonl
+*training_features.csv
+greeks_oi_snapshots.csv
+greeks_oi_contracts.csv
