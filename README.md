@@ -4,22 +4,6 @@ This project is an AI-assisted Python research and backtesting framework for NIF
 
 The system uses sample 5-minute OHLC market data, previous-day reference levels, auction-profile inspired signal logic, and end-of-day exit simulation to understand how a trading idea can be converted into a structured backtesting workflow.
 
-## V2.1 research showcase
-
-A newer research branch of the project is documented under [`v2.1/`](v2.1/README.md).
-
-V2.1 explores a more advanced NIFTY VP-OI architecture with:
-
-* 5-minute thesis + 1-minute/3-minute microstructure research
-* rolling 15m/30m options OI trajectories
-* auction-zone memory for repeated acceptance/failure
-* pressure, ignition, expansion and shock-expansion states
-* early-execution shadow arming
-* trade-health and no-progress/contradiction research
-* isolated paper state so experiments cannot affect the production-oriented V2 engine
-
-The public V2.1 showcase is intentionally sanitized: broker authentication, credentials, Telegram identifiers, account information, raw live state, private datasets and execution ledgers are excluded.
-
 ## Features
 
 * NIFTY 5-minute OHLC data processing
@@ -46,13 +30,8 @@ nifty-auction-profile-trading-bot/
 ├── src/
 │   └── nifty_backtest_runner.py
 │
-├── results/
-│   └── sample_backtest_results.csv
-│
-└── v2.1/
-    ├── README.md
-    ├── docs/
-    └── src/
+└── results/
+    └── sample_backtest_results.csv
 ```
 
 ## How It Works
@@ -101,6 +80,7 @@ The backtest runner generates metrics such as:
 * Pandas
 * NumPy
 * CSV-based market data
+
 
 ## How to Run
 
@@ -162,13 +142,12 @@ This project helped me get exposure to:
 * How trading rules can be converted into code
 * How output results can be stored and reviewed
 
-The main flow of the first public version is:
+
+The main flow of the project is:
 
 ```text
 CSV data → previous-day levels → signal generation → entry → EOD exit → result CSV
 ```
-
-The V2.1 research showcase extends that learning into multi-timeframe auction/OI state, causal research logging and isolated paper-trading architecture.
 
 ## Future Improvements
 
@@ -180,7 +159,7 @@ Planned improvements include:
 * Add paper trading mode
 * Add Docker setup
 * Add cloud deployment notes
-* Continue validating V2.1 timing and auction-acceptance research on more sessions
+* Refactor the single runner into separate modules later
 
 ## Disclaimer
 
