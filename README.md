@@ -4,6 +4,24 @@ This project is an AI-assisted Python research and backtesting framework for NIF
 
 The system uses sample 5-minute OHLC market data, previous-day reference levels, auction-profile inspired signal logic, and end-of-day exit simulation to understand how a trading idea can be converted into a structured backtesting workflow.
 
+## Research Architecture
+
+The current VP–OI research stack now has a dedicated architecture document covering:
+
+* V2 VP–OI signal engine
+* V2.1 microstructure-enhanced engine
+* Campaign V0.4 supervisory ensemble
+* regime / OI / price-acceptance entry arbitration
+* Trend Health warning layer
+* CVD + futures order-flow Exit Arbiter V1
+* hard vs soft exits
+* causal multi-timeframe timing
+* overfitting controls and forward validation
+
+See:
+
+`docs/VP_OI_V2_V21_CAMPAIGN_V04_ARCHITECTURE.md`
+
 ## Features
 
 * NIFTY 5-minute OHLC data processing
@@ -23,6 +41,8 @@ nifty-auction-profile-trading-bot/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
+├── docs/
+│   └── VP_OI_V2_V21_CAMPAIGN_V04_ARCHITECTURE.md
 │
 ├── data/
 │   └── sample_nifty_5min.csv
@@ -80,7 +100,6 @@ The backtest runner generates metrics such as:
 * Pandas
 * NumPy
 * CSV-based market data
-
 
 ## How to Run
 
@@ -142,8 +161,7 @@ This project helped me get exposure to:
 * How trading rules can be converted into code
 * How output results can be stored and reviewed
 
-
-The main flow of the project is:
+The main flow of the public sample project is:
 
 ```text
 CSV data → previous-day levels → signal generation → entry → EOD exit → result CSV
